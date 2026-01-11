@@ -1,0 +1,460 @@
+/* --- Reset & Global --- */
+:root {
+  --primary-color: #2d5c6b; /* Dark Teal */
+  --accent-color: #f8dec5; /* Peach/Light Orange */
+  --text-color: #333;
+  --bg-light: #f7f7f7;
+  --font-main: "Poppins", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- Typography --- */
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: #555;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* --- Buttons --- */
+.btn-primary {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-transparent {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 10px 30px;
+  border-radius: 25px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+/* --- Header --- */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+
+.logo {
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+.logo-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ddd;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+nav a {
+  margin-left: 25px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.mobile-menu-icon {
+  display: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* --- Hero --- */
+.hero {
+  text-align: center;
+  padding: 60px 20px 40px;
+  max-width: 800px;
+}
+
+.hero-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.img-box {
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+/* --- Feature Sections (Grey Background) --- */
+.bg-light {
+  background-color: var(--bg-light);
+  padding: 80px 0;
+  border-radius: 10px;
+  margin: 40px 20px; /* Inset container style like design */
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.icon-box {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.icon-box.dark {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.icon-box.peach {
+  background-color: #e8c4a8;
+  color: #4a3b32;
+}
+
+.feature-item,
+.feature-col {
+  max-width: 350px;
+}
+
+.feature-row {
+  display: flex;
+  gap: 30px;
+}
+
+.illustration-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.illustration-left {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* --- Split Section (Image Left, Content Right) --- */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 80px 20px;
+}
+
+.split-img {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+}
+
+.icon-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 20px;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.icon-list li i {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-top: 3px;
+}
+
+/* --- Banner & Footer Overlap --- */
+.banner-wrapper {
+  position: relative;
+  margin-bottom: 0;
+}
+
+.cta-banner {
+  position: relative;
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cta-content p {
+  color: #eee;
+}
+
+.icon-box.border-white {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+}
+
+/* Overlap Cards */
+.overlap-cards {
+  background-color: #ffeae0; /* Light peach */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+  margin-top: -60px; /* Overlap effect */
+  z-index: 3;
+  width: 80%; /* Smaller width than full */
+  border-radius: 15px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+}
+
+/* --- Footer --- */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 100px 20px 40px; /* Top padding to account for overlap if needed */
+  margin-top: -40px; /* Pull up behind the peach box */
+  padding-top: 80px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo.white {
+  color: white;
+}
+.logo-dot.white-dot {
+  background-color: white;
+}
+
+.footer-links a {
+  color: #ddd;
+  margin-left: 20px;
+  font-size: 0.8rem;
+}
+
+.socials {
+  margin-top: 10px;
+}
+
+.socials a {
+  color: white;
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+/* =========================================
+   MEDIA QUERIES (RESPONSIVENESS)
+   ========================================= */
+
+/* Tablet / iPad (Max width 992px) */
+@media (max-width: 992px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  .grid-2 {
+    gap: 20px;
+  }
+
+  .split-section {
+    gap: 30px;
+    padding: 50px 20px;
+  }
+
+  .overlap-cards {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+/* Mobile (Max width 768px) */
+@media (max-width: 768px) {
+  /* Header */
+  nav {
+    display: none;
+  } /* Hide desktop menu */
+  .mobile-menu-icon {
+    display: block;
+  }
+
+  /* Hero */
+  .hero-images {
+    grid-template-columns: 1fr; /* Stack images */
+  }
+
+  /* Layout Stacking */
+  .grid-2 {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .feature-item,
+  .feature-col {
+    margin: 0 auto 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-row {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Reverse order for specific sections if needed, 
+       but standard stacking is usually top-down */
+  .illustration-right,
+  .illustration-left {
+    justify-content: center;
+    margin-bottom: 30px;
+    order: -1; /* Image first on mobile */
+  }
+
+  /* Split Section */
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .split-img {
+    height: 300px;
+    order: -1;
+  }
+
+  /* Overlap Cards */
+  .overlap-cards {
+    width: 95%;
+    grid-template-columns: 1fr; /* 1 Column */
+    padding: 40px 20px;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .footer-links a {
+    display: block;
+    margin: 10px 0;
+  }
+}
